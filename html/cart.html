@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" /> 
+    <style>
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #ffd6a5;
+            box-shadow: 0 4px 8px #f9b89cfa;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #000;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd6a5;
+            text-decoration: underline;
+        }
+
+        .signup-btn {
+            background-color: #f1b398;
+            border-radius: 8px;
+            padding: 8px 16px;
+            border: none;
+            color: #000;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .signup-btn:hover {
+            background-color: #e6977d;
+            transform: scale(1.05);
+        }
+        .cart-container {
+            margin: 50px auto;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ffd6a5;
+            box-shadow: 0 4px 8px #f9b89cfa;
+        }
+        .cart-item img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .cart-item-info {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        .cart-item-info h5 {
+            font-size: 18px;
+            color: #000;
+        }
+        .cart-item-info p {
+            font-size: 16px;
+            color: #333;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+            margin: 0 10px;
+        }
+        .btn-hover {
+            background-color: #f1b398;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+        .btn-hover:hover {
+            background-color: #e6977d;
+        }
+        .delete-btn {
+            background-color: #f1b398;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .delete-btn:hover {
+            background-color: #e6977d;
+        }
+        .footer {
+            background-color: #f1b398;
+            padding: 20px 0;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+            padding: 1px 0;
+          }
+          
+          
+          .footer h6 {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: normal;
+          }
+    
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo3.png" alt="Logo" width="90" height="70">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="workshop.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#books">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Reviews">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Bests.html">Best Seller</a>
+              </li>
+              
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link signup-btn me-5" href="cart.html"><span class="material-symbols-outlined">
+                        shopping_cart
+                        </span>
+                        <span id="cart-count" class="badge bg-danger">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link signup-btn me-5" href="login.html">Login/Signupp</a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+    <div class="container cart-container">
+        <h1 class="text-center m-5" style="font-family:'Times New Roman', Times, serif;"> <b>Shopping Cart</b></h1>
+        
+        <div class="text-right mt-4">
+            <h4>Total: $19.98</h4>
+            <button class="btn btn-primary mt-3">Proceed to Checkout</button>
+        </div>
+    </div>
+   
+    <footer class="footer">
+        <div class="container d-flex justify-content-between align-items-center">
+          <!-- Left Side: Logo -->
+          <div>
+            <img src="images/logo2.png" alt="Logo" style="width: 160px; height: 160px;">
+          </div>
+      
+          <!-- Center: Navigation Links -->
+          <div>
+            <ul class="nav justify-content-center">
+              <li class="nav-item"><a href="#" class="nav-link px-3 text-white">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-3 text-white">Features</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-3 text-white">Pricing</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-3 text-white">FAQs</a></li>
+            </ul>
+          </div>
+      
+          <!-- Right Side: Social Media Icons -->
+          <div class="d-flex">
+            <a href="#" class="text-white mx-2" style="font-size: 30px;"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white mx-2" style="font-size: 30px;"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white mx-2" style="font-size: 30px;"><i class="bi bi-telegram"></i></a>
+          </div>
+        </div>
+      
+        <h6 class="text-center text-white mt-3">CREATED BY © CCSIT KFU students</h6>
+      </footer>
+    <script>
+        window.onload = function () {
+            const cartContainer = document.querySelector(".cart-container");
+
+            // Retrieve cart data from Local Storage
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            let total = 0;
+
+            // Display each cart item
+            cart.forEach((item, index) => {
+                const newCartItem = document.createElement("div");
+                newCartItem.classList.add("cart-item");
+
+                newCartItem.innerHTML = `
+                    <img src="${item.image}" alt="Book Cover">
+                    <div class="cart-item-info">
+                        <h5>${item.title}</h5>
+                        <p>${item.price}</p>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="btn btn-outline-secondary minus-btn" data-index="${index}">-</button>
+                        <input type="text" value="${item.quantity}" class="quantity-input" data-index="${index}" readonly>
+                        <button class="btn btn-outline-secondary plus-btn" data-index="${index}">+</button>
+                    </div>
+                    <button class="delete-btn" data-index="${index}">Delete</button>
+                `;
+
+                cartContainer.insertBefore(newCartItem, cartContainer.querySelector(".text-right"));
+
+                // Update total
+                total += parseFloat(item.price.replace("$", "")) * item.quantity;
+            });
+
+            // Display total
+            const totalElement = cartContainer.querySelector(".text-right h4");
+            totalElement.textContent = `Total: $${total.toFixed(2)}`;
+
+            // Add event listeners for delete buttons
+            const deleteButtons = document.querySelectorAll(".delete-btn");
+            deleteButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                    const index = this.getAttribute("data-index");
+
+                    // Remove the item from the array
+                    cart.splice(index, 1);
+
+                    // Update Local Storage
+                    localStorage.setItem("cart", JSON.stringify(cart));
+
+                    // Remove the element from the DOM
+                    this.parentElement.remove();
+
+                    // Update the total
+                    updateTotal(cart);
+                    updateCartCount();
+                });
+            });
+
+            // Add event listeners for + and - buttons
+            const plusButtons = document.querySelectorAll(".plus-btn");
+            const minusButtons = document.querySelectorAll(".minus-btn");
+
+            plusButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                    const index = this.getAttribute("data-index");
+                    const quantityInput = document.querySelector(`.quantity-input[data-index="${index}"]`);
+                    cart[index].quantity += 1;
+                    quantityInput.value = cart[index].quantity;
+
+                    // Update Local Storage
+                    localStorage.setItem("cart", JSON.stringify(cart));
+
+                    updateTotal(cart);
+                });
+            });
+
+            minusButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                    const index = this.getAttribute("data-index");
+                    const quantityInput = document.querySelector(`.quantity-input[data-index="${index}"]`);
+                    const currentQuantity = cart[index].quantity;
+
+                    if (currentQuantity > 1) {
+                        cart[index].quantity -= 1;
+                        quantityInput.value = cart[index].quantity;
+
+                        // Update Local Storage
+                        localStorage.setItem("cart", JSON.stringify(cart));
+
+                        updateTotal(cart);
+                    }
+                });
+            });
+        };
+
+        // Update total
+        function updateTotal(cart) {
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += parseFloat(item.price.replace("$", "")) * item.quantity;
+            });
+
+            const totalElement = document.querySelector(".text-right h4");
+            totalElement.textContent = `Total: $${total.toFixed(2)}`;
+        }
+    
+        // دالة لتحديث عدد الكتب
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const count = cart.length;
+            document.getElementById("cart-count").textContent = count;
+        }
+        updateCartCount();
+    </script>
+</body>
+</html>

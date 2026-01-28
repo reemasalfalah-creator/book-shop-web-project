@@ -1,0 +1,243 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
+
+
+  <style> 
+    body { 
+      font-family: Arial, sans-serif; 
+      background-color: #ffffff; 
+      margin: 0; 
+      padding: 0; 
+    } 
+ 
+    .navbar { 
+      background-color: #ffffff; 
+      border-bottom: 2px solid #ffd6a5; 
+      box-shadow: 0 4px 8px #f9b89cfa; 
+    } 
+ 
+    .navbar-nav .nav-link { 
+      color: #000; 
+      transition: color 0.3s ease; 
+    } 
+ 
+    .navbar-nav .nav-link:hover { 
+      color: #ffd6a5; 
+      text-decoration: underline; 
+    } 
+ 
+    .signup-btn { 
+      background-color: #f1b398; 
+      border-radius: 8px; 
+      padding: 8px 16px; 
+      border: none; 
+      color: #000; 
+      transition: background-color 0.3s, transform 0.3s; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    } 
+ 
+    .signup-btn:hover { 
+      background-color: #e6977d; 
+      transform: scale(1.05); 
+    } 
+ 
+    .card { 
+      border: 2px solid #f1b398; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+      padding: 20px; 
+      width: 420px; 
+      text-align: center; 
+      background-color: #fff; 
+      margin: 100px auto; 
+    } 
+ 
+    .card img { 
+      width: 100%; /* اجعل الصورة تأخذ عرض الكارد بالكامل */
+      height: auto; /* للحفاظ على نسبة الطول إلى العرض */
+      border-radius: 10px 10px 0 0; /* إذا أردت جعل الزوايا العلوية دائرية */
+      object-fit: cover; /* لضبط الصورة بحيث تغطي الكارد بشكل مثالي */
+      margin: 0; /* إزالة أي هوامش إضافية */
+    }
+    
+ 
+    .card-title { 
+      font-size: 1.5rem; 
+      font-weight: bold; 
+      margin-bottom: 15px; 
+    } 
+ 
+    .card-text { 
+      font-size: 1rem; 
+      margin-bottom: 20px; 
+      color: #555; 
+    } 
+ 
+    .btn-hover { 
+      background-color: #f1b398; 
+      color: #000; 
+      border-radius: 5px; 
+      transition: background-color 0.3s ease, transform 0.3s; 
+    } 
+ 
+    .btn-hover:hover { 
+      background-color: #e6977d; 
+      transform: scale(1.05); 
+    } 
+    .footer {
+      background-color: #f1b398;
+      padding: 20px 0;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin-top: 20px;
+      padding: 1px 0;
+    }
+    
+    
+    .footer h6 {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  </style> 
+</head> 
+<body> 
+  <!-- Navbar --> 
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo3.png" alt="Logo" width="90" height="70">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="workshop.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#books">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Reviews">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Bests.html">Best Seller</a>
+              </li>
+              
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link signup-btn me-5" href="cart.html"><span class="material-symbols-outlined">
+                        shopping_cart
+                        </span>
+                        <span id="cart-count" class="badge bg-danger">0</span>
+
+                      </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link signup-btn me-5" href="login.html">Login/Signupp</a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+ 
+  <!-- Card --> 
+  <div class="card"> 
+    <img src="images/bb2.jpeg" class="card-img-top" alt="Book Cover"> 
+    <div class="card-body"> 
+      <h5 class="card-title">Anxious Girl</h5> 
+      <p class="card-text"> 
+        The book *"Anxious Girl"* by Rosa Silva explores the life of a young woman struggling with anxiety and the constant pressure to be perfect. It highlights the importance of self-acceptance and challenges societal expectations. This relatable and emotional journey reminds readers that it's okay to embrace imperfections and prioritize mental well-being. 
+      </p> 
+      <h5>
+        25.99 SR
+      </h5>
+      <button type="button" class="btn btn-primary btn-hover" id="bottum">Add to cart</button> 
+    </div> 
+  </div> 
+ 
+  <footer class="footer">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Left Side: Logo -->
+      <div>
+        <img src="images/logo2.png" alt="Logo" style="width: 160px; height: 160px;">
+      </div>
+  
+      <!-- Center: Navigation Links -->
+      <div>
+        <ul class="nav justify-content-center">
+          <li class="nav-item"><a href="#" class="nav-link px-3 text-white">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-3 text-white">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-3 text-white">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-3 text-white">FAQs</a></li>
+        </ul>
+      </div>
+  
+      <!-- Right Side: Social Media Icons -->
+      <div class="d-flex">
+        <a href="#" class="text-white mx-2" style="font-size: 30px;"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white mx-2" style="font-size: 30px;"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="text-white mx-2" style="font-size: 30px;"><i class="bi bi-telegram"></i></a>
+      </div>
+    </div>
+  
+    <h6 class="text-center text-white mt-3">CREATED BY © CCSIT KFU students</h6>
+  </footer> 
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // تحميل عدد الكتب من Local Storage عند تحميل الصفحة
+        updateCartCount();
+  
+        document.getElementById("bottum").addEventListener("click", function () {
+            const book = {
+              title: "Anxious Girl",
+              price: "25.99 SR",
+              image: "images/bb2.jpeg",
+                quantity: 1 // إضافة خاصية الكمية
+            };
+  
+            // الحصول على السلة الحالية من Local Storage
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+            // تحقق إذا كان الكتاب موجودًا بالفعل
+            const existingBookIndex = cart.findIndex(item => item.title === book.title);
+  
+            if (existingBookIndex !== -1) {
+                // إذا كان موجودًا، قم بزيادة الكمية
+                cart[existingBookIndex].quantity += 1;
+            } else {
+                // إذا لم يكن موجودًا، أضفه إلى السلة
+                cart.push(book);
+            }
+  
+            // تخزين السلة المحدثة في Local Storage
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+  
+        });
+  
+        // دالة لتحديث عدد الكتب
+        function updateCartCount() {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const count = cart.length;
+          document.getElementById("cart-count").textContent = count;
+        }
+      });
+    </script>
+</body> 
+</html>
